@@ -2,10 +2,10 @@
     <string name="app_name">protorype2</string>
     <string name="Appeal">Заявка</string>
     <string name="MyAppeal">Мои заявка</string>
-    <string name="Call">Звонок диспечеру</string>
-    <string name="st_call">Звонок диспечеру</string>
+    <string name="Call">Звонок диспетчера</string>
+    <string name="st_call">Звонок диспетчера</string>
     <string name="st_list">Мои заявки</string>
     <string name="st_add">Создать заявку</string>
-    <string name="NumberUK">89992952710</string>
-    <string name="CallTo">Позвонить диспечеру</string>
+    <string name="NumberUK">123</string>
+    <string name="CallTo">Позвонить диспетчеру</string>
 </resources>

@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickCall(view: View){
-        val number = "123"
+        val number = "89992952710"
         val intent = Intent(Intent.ACTION_CALL);
         intent.data = Uri.parse("tel:$number")
         startActivity(intent)

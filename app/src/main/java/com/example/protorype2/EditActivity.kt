@@ -12,6 +12,8 @@ import android.view.View
 import android.widget.DatePicker
 import android.widget.EditText
 import androidx.annotation.RequiresApi
+import com.example.protorype2.db.MyDbManager
+import com.example.protorype2.db.MyDbNameClass
 import kotlinx.android.synthetic.main.activity_edit.*
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -20,6 +22,8 @@ import java.lang.reflect.*
 
 
 class EditActivity : AppCompatActivity(),DatePickerDialog.OnDateSetListener {
+
+    val myDbManager = MyDbManager(this)
 
     var day = 0
     var month = 0
@@ -71,5 +75,22 @@ class EditActivity : AppCompatActivity(),DatePickerDialog.OnDateSetListener {
 
     }
 
+    fun onClickSave(view: View){
+        myDbManager.openDb()
+        myDbManager.insertToDb("-","-",
+            tvAppSubject.text.toString(),
+            btdate.text.toString(),
+            tvporch.text.toString(),
+            tvFloor.text.toString(),
+            tvDescription.text.toString(),
+            "-")
+
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        myDbManager.closeDb()
+    }
 
 }
